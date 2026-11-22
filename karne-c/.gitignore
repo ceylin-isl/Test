@@ -3,3 +3,4 @@ karne
 *.o
 .DS_Store
 test_degerlendirme
+test_ortalama
