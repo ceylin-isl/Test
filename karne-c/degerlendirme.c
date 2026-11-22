@@ -12,6 +12,15 @@ const char *harf_notu(int puan) {
     else return "FF";
 }
 
-int kalan_dersler(int notlar[], const char *adlar[], int n) { return 0; }
+int kalan_dersler(int notlar[], const char *adlar[], int n) {
+    int sayac = 0;
+    for (int i = 0; i < n; i++) {
+        if (notlar[i] < 50) {
+            printf("%s (%d)\n", adlar[i], notlar[i]);
+            sayac++;
+        }
+    }
+    return sayac;
+}
 
 const char *basari_durumu(double ort) { return "??"; }
