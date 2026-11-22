@@ -2,7 +2,9 @@
 #include "degerlendirme.h"
 
 const char *harf_notu(int puan) {
-    if (puan >= 90) return "AA";
+	const char *harf_notu(int puan) {
+	if (puan == -1) return "GR";
+	else if (puan >= 90) return "AA";
     else if (puan >= 85) return "BA";
     else if (puan >= 80) return "BB";
     else if (puan >= 75) return "CB";
