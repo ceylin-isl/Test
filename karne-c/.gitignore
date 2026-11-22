@@ -1,0 +1,4 @@
+karne
+*.exe
+*.o
+.DS_Store
