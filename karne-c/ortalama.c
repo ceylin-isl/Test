@@ -18,6 +18,14 @@ if (n <= 0) return 0.0;
     }
     if (kredi_toplami == 0) return 0.0;
     return (double)agirlikli_toplam / kredi_toplami;
+}
 
-
-int en_yuksek_ders(int notlar[], int n) { return 0; }
+int en_yuksek_ders(int notlar[], int n) {
+    int en_iyi = 0;
+    for (int i = 1; i < n; i++) {
+        if (notlar[i] > notlar[en_iyi]) {
+            en_iyi = i;
+        }
+    }
+    return en_iyi;
+}
