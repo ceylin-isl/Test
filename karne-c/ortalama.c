@@ -17,6 +17,7 @@ double agirlikli_ortalama(int notlar[], int krediler[], int n) {
     int agirlikli_toplam = 0;
     int kredi_toplami = 0;
     for (int i = 0; i < n; i++) {
+        if (notlar[i] == -1) continue;      
         agirlikli_toplam += notlar[i] * krediler[i];
         kredi_toplami += krediler[i];
     }
