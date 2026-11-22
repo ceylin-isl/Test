@@ -9,5 +9,15 @@ for (int i = 0; i < n; i++) {
 	return (double)toplam / n;
 
 double agirlikli_ortalama(int notlar[], int krediler[], int n) { return 0.0; }
+if (n <= 0) return 0.0;
+    int agirlikli_toplam = 0;
+    int kredi_toplami = 0;
+    for (int i = 0; i < n; i++) {
+        agirlikli_toplam += notlar[i] * krediler[i];
+        kredi_toplami += krediler[i];
+    }
+    if (kredi_toplami == 0) return 0.0;
+    return (double)agirlikli_toplam / kredi_toplami;
+
 
 int en_yuksek_ders(int notlar[], int n) { return 0; }
