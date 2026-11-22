@@ -2,7 +2,8 @@
 #include "degerlendirme.h"
 
 const char *harf_notu(int puan) {
-    if (puan >= 90) return "AA";
+    if (puan == -1) return "GR";
+    else if (puan >= 90) return "AA";
     else if (puan >= 85) return "BA";
     else if (puan >= 80) return "BB";
     else if (puan >= 75) return "CB";
@@ -15,7 +16,7 @@ const char *harf_notu(int puan) {
 int kalan_dersler(int notlar[], const char *adlar[], int n) {
     int sayac = 0;
     for (int i = 0; i < n; i++) {
-        if (notlar[i] < 50) {
+        if (notlar[i] != -1 && notlar[i] < 50) {
             printf("%s (%d)\n", adlar[i], notlar[i]);
             sayac++;
         }

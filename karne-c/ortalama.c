@@ -1,12 +1,15 @@
 #include "ortalama.h"
 
 double ortalama(int notlar[], int n) {
-    if (n <= 0) return 0.0;
     int toplam = 0;
+    int sayi = 0;
     for (int i = 0; i < n; i++) {
+        if (notlar[i] == -1) continue;
         toplam += notlar[i];
+        sayi++;
     }
-    return (double)toplam / n;
+    if (sayi == 0) return 0.0;
+    return (double)toplam / sayi;
 }
 
 double agirlikli_ortalama(int notlar[], int krediler[], int n) {
@@ -14,6 +17,7 @@ double agirlikli_ortalama(int notlar[], int krediler[], int n) {
     int agirlikli_toplam = 0;
     int kredi_toplami = 0;
     for (int i = 0; i < n; i++) {
+        if (notlar[i] == -1) continue;      
         agirlikli_toplam += notlar[i] * krediler[i];
         kredi_toplami += krediler[i];
     }

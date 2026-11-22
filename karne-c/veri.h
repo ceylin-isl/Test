@@ -1,7 +1,7 @@
 #ifndef VERI_H
 #define VERI_H
 
-#define DERS_SAYISI 6
+#define DERS_SAYISI 7
 
 const char *ders_adlari[DERS_SAYISI] = {
     "Programlama",
@@ -9,9 +9,10 @@ const char *ders_adlari[DERS_SAYISI] = {
     "Fizik I",
     "Lineer Cebir",
     "Kimya",
-    "Ingilizce"
+    "Ingilizce",
+    "Turk Dili"
 };
-int krediler[DERS_SAYISI] = {6, 6, 5, 4, 4, 3};
-int notlar[DERS_SAYISI]   = {88, 62, 45, 74, 55, 91};
+int krediler[DERS_SAYISI] = {6, 6, 5, 4, 4, 3, 2};
+int notlar[DERS_SAYISI]   = {88, 62, 45, 74, -1, 91, 80};
 
 #endif
